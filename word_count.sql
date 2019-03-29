@@ -25,8 +25,8 @@ and (
 group by clmw2,clmc2,clmn2 
 ) as le_tbl1
 inner join (select max(ri_tbl1.mx ) as mx2 ,ri_tbl1.clm2 as clm3 from 
-(select count(column_word) as mx , column_word as clm2 , column_comment as clmc1 , column_name as clmn1 from
-(select count(column_word) as awt ,column_word as clmw2 , column_cimment as clmc2 , as column_name as clmn2 from (select 
+(select count(column_word) as mx , column_word as clm2 , column_comment as clmc1 , column_name as clmn1
+ from (select 
 past.relname as table_name
 ,pa.attname as column_name
 ,regexp_split_to_table(pa.attname , ‘_’ )  as column_word
